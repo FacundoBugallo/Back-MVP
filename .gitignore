@@ -1,4 +1,45 @@
-.env
-.env.example
-.env.local
-.env.staging
+# Entornos virtuales
+venv/
+.env/
+
+# Archivos de entorno
+*.env
+!.env.example  # este sí se puede subir como plantilla vacía
+
+# Archivos de compilación de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Archivos de logs
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de IDEs
+.vscode/
+.idea/
+
+# SQLite (por si lo usás en tests)
+*.sqlite3
+
+# Archivos de cache
+*.bak
+*.swp
+*.swo
+
+# Archivos creados por pytest
+.pytest_cache/
+
+# Archivos de coverage
+htmlcov/
+.coverage
+
+# Archivos de Uvicorn (si los usás)
+*.pid
+
+# Archivos de bases de datos temporales
+*.db
