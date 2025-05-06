@@ -49,7 +49,7 @@ backend/
 
 1. Clona el repositorio:
    \`\`\`bash
-   git clone https://github.com/tu_usuario/tu_repo_backend.git
+   git clone 
    cd tu_repo_backend
    \`\`\`
 
