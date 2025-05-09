@@ -1,6 +1,6 @@
 # 💰 SaaS de Finanzas Personales – Backend
 
-Este es el backend de un sistema SaaS (Software como Servicio) enfocado en la gestión de finanzas personales y de pequeñas empresas. Desarrollado con **FastAPI**, proporciona una API RESTful moderna, segura y eficiente.
+Este es el backend de un sistema SaaS, enfocado en la gestión de finanzas personales y de pequeñas empresas. Desarrollado con **FastAPI**, proporciona una API RESTful moderna, segura y eficiente.
 
 ---
 
@@ -17,7 +17,7 @@ Este es el backend de un sistema SaaS (Software como Servicio) enfocado en la ge
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **[FastAPI](https://fastapi.tiangolo.com/)** – Framework moderno para APIs con Python
+- **[FastAPI](https://fastapi.tiangolo.com/)** – Framework APIs con Python
 - **[PostgreSQL](https://www.postgresql.org/)** – Base de datos relacional
 - **[SQLAlchemy](https://www.sqlalchemy.org/)** – ORM para Python
 - **[Pydantic](https://docs.pydantic.dev/)** – Validación de datos basada en Python
@@ -49,7 +49,7 @@ backend/
 
 1. Clona el repositorio:
    \`\`\`bash
-   git clone https://github.com/tu_usuario/tu_repo_backend.git
+   git clone 
    cd tu_repo_backend
    \`\`\`
 
@@ -98,4 +98,4 @@ Este proyecto está licenciado bajo los términos de la MIT License.
 
 ## ✍️ Autor
 
-Desarrollado por [Tu Nombre].
+Desarrollado por Facundo Bugallo.
