@@ -1,26 +1,24 @@
 from datetime import datetime, timedelta
 from jose import JWTError, jwt
-from passlib.hash import bcrypt
-from app.models import User
+from passlib.context import CryptContext
 
-# Clave secreta (usá un valor más seguro en producción)
-SECRET_KEY = "supersecret"
+# Clave secreta para firmar el token
+SECRET_KEY = "tu_clave_secreta_segura"
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 1 día
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+# Encriptador
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def verify_password(plain_password, hashed_password):
-    return bcrypt.verify(plain_password, hashed_password)
+    return pwd_context.verify(plain_password, hashed_password)
 
-def authenticate_user(user: User, password: str):
-    if not verify_password(password, user.password_hash):
-        return False
-    return True
+def hash_password(password: str) -> str:
+    return pwd_context.hash(password)
 
 def create_access_token(data: dict, expires_delta: timedelta = None):
     to_encode = data.copy()
-    if expires_delta:
-        expire = datetime.utcnow() + expires_delta
-    else:
-        expire = datetime.utcnow() + timedelta(minutes=15)
+    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=15))
     to_encode.update({"exp": expire})
-    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
