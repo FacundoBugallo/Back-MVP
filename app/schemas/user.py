@@ -1,7 +1,7 @@
 from pydantic import BaseModel, EmailStr
 from datetime import datetime
-from typing import Optional
 
+#login de usuario
 class UserLogin(BaseModel):
     email: EmailStr
     password: str
@@ -11,10 +11,8 @@ class UserBase(BaseModel):
     name: str
     email: EmailStr
 
-# Para crear un usuario (registro)
-class UserCreate(BaseModel):
-    name: str
-    email: EmailStr
+# crear un usuario (registro)
+class UserCreate(UserBase):
     password: str
 
 # Para mostrar un usuario (sin contraseña)
