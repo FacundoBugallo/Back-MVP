@@ -6,7 +6,7 @@ from typing import Optional
 class IncomeBase(BaseModel):
     amount: float
     description: Optional[str] = None
-    date: datetime.date
+    date: date
     category_id: int
 
 # Crear ingreso
@@ -17,7 +17,7 @@ class IncomeCreate(IncomeBase):
 class IncomeUpdate(BaseModel):
     amount: Optional[float] = None
     description: Optional[str] = None
-    date: Optional[datetime.date] = None
+    date: Optional[date] = None
     category_id: Optional[int] = None
 
 # Para mostrar un ingreso
