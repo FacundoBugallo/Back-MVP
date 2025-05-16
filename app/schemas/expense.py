@@ -18,3 +18,9 @@ class ExpenseOut(ExpenseBase):
 
     class Config:
         orm_mode = True
+
+class ExpenseUpdate(BaseModel):
+    amount: float | None = None
+    description: str | None = None
+    date: date | None = None
+    category_id: int | None = None
